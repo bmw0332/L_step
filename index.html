@@ -20,7 +20,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@600&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Old+Mincho:wght@700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@600&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
 
 <style>
 :root{
@@ -42,7 +42,7 @@
   --page:#DCE9F4;
   --col:920px;
   --pad:20px;
-  --serif:"Zen Old Mincho","Hiragino Mincho ProN","Yu Mincho","YuMincho","Noto Serif JP",serif;
+  --serif:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic","Meiryo",sans-serif;
   --sans:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic","Meiryo",sans-serif;
   --hand:"Klee One","Zen Kaku Gothic New","Hiragino Kaku Gothic ProN",sans-serif;
   /* 担当者の写真（冒頭と担当者紹介の2か所で使用。差し替えはここだけ） */
@@ -198,6 +198,8 @@ strong{ font-weight:700; }
 }
 .portrait{ aspect-ratio:4/5; background:var(--portrait) 50% 30% / cover no-repeat; }
 .hand-note{ padding-bottom:20px; font-family:var(--hand); font-size:17px; font-weight:600; line-height:1.55; letter-spacing:.02em; }
+.hand-note .hand-small{ display:block; font-size:14px; color:var(--blue-deep); }
+.hand-note .hand-name{ font-family:var(--sans); font-size:20px; font-weight:700; letter-spacing:.04em; }
 .hand-arrow{ display:block; width:50px; height:34px; margin:0 0 6px; transform:scaleX(-1); }
 @media (min-width:768px){
   .hero-photo{ flex-direction:column; align-items:center; justify-content:flex-start; gap:12px; padding-top:10px; }
@@ -354,7 +356,7 @@ strong{ font-weight:700; }
   border:4px solid #fff; box-shadow:0 0 0 2px var(--blue-line);
 }
 .staff-label{ color:var(--blue-deep); font-size:13px; font-weight:700; line-height:1.6; }
-.staff-name{ font-family:var(--serif); font-size:26px; font-weight:700; letter-spacing:.14em; line-height:1.4; }
+.staff-name{ font-family:var(--serif); font-size:26px; font-weight:700; letter-spacing:.06em; line-height:1.4; }
 .staff-role{ margin-top:2px; color:var(--ink-sub); font-size:13px; line-height:1.6; }
 @media (min-width:768px){ .avatar{ width:128px; height:128px; } .staff-name{ font-size:30px; } .staff-role{ font-size:14px; } }
 .letter{ margin-top:26px; }
@@ -502,7 +504,8 @@ strong{ font-weight:700; }
       </div>
       <figcaption class="hand-note">
         <svg class="hand-arrow" viewBox="0 0 50 34" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 30C14 29 28 23 41 8"/><path d="M33 8.5 41.5 7l.6 8.6"/></svg>
-        柴沼が<br>担当します！
+        <span class="hand-small">代表</span>
+        <span class="hand-name">柴沼 寛人</span>が<br>直接お話を<br>うかが<wbr>います
       </figcaption>
     </figure>
 
@@ -632,7 +635,7 @@ strong{ font-weight:700; }
       </div>
 
       <div class="letter">
-        <p>はじめまして。<wbr>柴沼です。</p>
+        <p>はじめまして。<wbr>代表の<wbr>柴沼 寛人です。</p>
         <p>社会人としての<wbr>10数年、<wbr>一貫して、<wbr>課題を<wbr>言葉にして<wbr>整理し、<wbr>解決する<wbr>仕事に<wbr>携わってきました。</p>
         <p>ホームページや<wbr>LINEは、<wbr>お客様が<wbr>最初に<wbr>目にする、<wbr>事業の<wbr>顔のような<wbr>ものです。<wbr>事業の<wbr>ことを<wbr>よく<wbr>知らないまま、<wbr>見た目だけを<wbr>整える<wbr>ことは<wbr>したく<wbr>ありません。</p>
         <p>いまの<wbr>集客に<wbr>もやもやしている方は、<wbr>うまく<wbr>言葉に<wbr>できなくても<wbr>大丈夫です。<wbr>お話を<wbr>伺いながら、<wbr>一緒に<wbr>整理していきましょう。</p>
