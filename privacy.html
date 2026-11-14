@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 検索結果には出さないページ（公開後もこのままで問題ありません） -->
+<meta name="robots" content="noindex">
+<!-- プライバシーポリシー  v1.0（2026-11-14）経理改善LP（bmw0332/top）のポリシーをもとに、ホームページ・LINE業務向けに調整 -->
+<title>プライバシーポリシー｜BASEマネジメントワークス株式会社</title>
+<meta name="description" content="BASEマネジメントワークス株式会社のプライバシーポリシー（個人情報の取扱い）です。">
+
+<!-- GTM / GA4：トップページと同じタグをここに貼り付け -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+/* ===== 下層ページ共通（トップページ index.html と同じ色・文字・ヘッダー・帯見出し・フッター） ===== */
+:root{
+  --ink:#3A322C;
+  --ink-sub:#6B6058;
+  --blue:#1E6FB8;
+  --blue-deep:#17558F;
+  --blue-pale:#EAF3FA;
+  --blue-line:#B8D3EA;
+  --page:#DCE9F4;
+  --col:920px;
+  --pad:20px;
+  --serif:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic","Meiryo",sans-serif;
+  --sans:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic","Meiryo",sans-serif;
+}
+@media (min-width:768px){ :root{ --pad:44px; } }
+
+*,*::before,*::after{ box-sizing:border-box; }
+html{ -webkit-text-size-adjust:100%; }
+body{
+  margin:0;
+  background-color:var(--page);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.9;
+  letter-spacing:.04em;
+  /* 改行は文節の区切り（<wbr>）だけで行う。「・」の直後で改行しないよう &#x2060;（ワードジョイナー）を入れている */
+  word-break:keep-all;
+  overflow-wrap:anywhere;
+  line-break:strict;
+}
+@media (min-width:768px){
+  body{
+    font-size:17px;
+    background-image:repeating-linear-gradient(45deg, rgba(255,255,255,.45) 0 2px, transparent 2px 10px);
+  }
+}
+p, li, dd{ text-wrap:pretty; }
+h1, h2, h3{ margin:0; font-weight:700; line-height:1.5; text-wrap:balance; }
+p{ margin:0; }
+a{ color:inherit; }
+strong{ font-weight:700; }
+.nb{ white-space:nowrap; }
+.sr-only{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+.skip{ position:absolute; left:-9999px; top:8px; z-index:100; background:var(--blue-deep); color:#fff; padding:8px 16px; border-radius:6px; }
+.skip:focus{ left:8px; }
+:focus-visible{ outline:3px solid var(--blue-deep); outline-offset:3px; }
+
+.page{ max-width:var(--col); margin-inline:auto; background:#fff; overflow:hidden; overflow:clip; }
+@media (min-width:960px){
+  .page{ box-shadow:0 0 0 1px rgba(23,85,143,.10), 0 16px 48px rgba(23,85,143,.12); }
+}
+
+/* ---------- ヘッダー ---------- */
+.site-header{ border-top:6px solid var(--blue); background:#fff; }
+.header-inner{
+  display:flex; align-items:center; justify-content:space-between; gap:16px;
+  padding:12px var(--pad);
+  border-bottom:1px solid #E3ECF4;
+}
+.logo{ display:block; text-decoration:none; line-height:1.45; }
+.logo-sub{ display:block; color:var(--blue-deep); font-size:12px; font-weight:700; letter-spacing:.08em; }
+.logo-name{ display:block; color:var(--ink); font-family:var(--serif); font-size:16px; font-weight:700; letter-spacing:.06em; }
+@media (min-width:768px){
+  .header-inner{ padding-block:14px; }
+  .logo-sub{ font-size:13px; }
+  .logo-name{ font-size:19px; }
+}
+
+/* ---------- 帯見出し（ページタイトル） ---------- */
+.band{
+  position:relative;
+  padding:20px var(--pad) 18px;
+  background:var(--blue); color:#fff;
+  border-bottom:6px solid var(--blue-deep);
+  font-family:var(--serif); font-size:22px; font-weight:700; line-height:1.55; letter-spacing:.08em;
+  text-align:center;
+}
+.band::after{
+  content:""; position:absolute; left:50%; top:calc(100% + 6px);
+  transform:translateX(-50%);
+  border-top:14px solid var(--blue-deep);
+  border-left:16px solid transparent; border-right:16px solid transparent;
+}
+@media (min-width:768px){ .band{ padding-block:24px 22px; font-size:29px; } }
+.sec-body{ padding:50px var(--pad) 56px; }
+@media (min-width:768px){ .sec-body{ padding-block:64px 72px; } }
+.narrow{ max-width:720px; margin-inline:auto; }
+
+/* ---------- トップページへ戻る ---------- */
+.back{ margin-top:48px; text-align:center; }
+.back a{ display:inline-flex; align-items:center; gap:10px; color:var(--blue-deep); font-weight:700; text-underline-offset:4px; }
+.back a::before{ content:""; flex:none; width:8px; height:8px; border-left:2px solid currentColor; border-bottom:2px solid currentColor; transform:rotate(45deg); }
+
+/* ---------- フッター ---------- */
+.site-footer{ padding:36px var(--pad) calc(28px + env(safe-area-inset-bottom)); background:var(--blue-deep); color:#fff; font-size:14px; line-height:1.8; }
+.footer-name{ font-family:var(--serif); font-size:16px; font-weight:700; letter-spacing:.06em; }
+.footer-links{ display:flex; flex-wrap:wrap; gap:4px 24px; margin:12px 0 0; padding:0; list-style:none; }
+.footer-links a{ text-underline-offset:3px; }
+.footer-links a[aria-current="page"]{ text-decoration:none; font-weight:700; }
+.copyright{ margin-top:20px; color:#D5E4F1; font-size:12px; }
+
+/* ---------- プライバシーポリシー ---------- */
+.doc h2{
+  display:flex; align-items:baseline; gap:.45em;
+  margin-top:44px; padding:2px 0 2px 12px;
+  border-left:5px solid var(--blue);
+  color:var(--blue-deep); font-family:var(--serif); font-size:18px; line-height:1.5;
+}
+.doc h2 .h-num{ flex:none; color:var(--blue); font-feature-settings:"tnum"; }
+@media (min-width:768px){ .doc h2{ margin-top:52px; font-size:20px; } }
+.doc h2 + *{ margin-top:14px; }
+.doc p + p, .doc p + ul, .doc ul + p{ margin-top:12px; }
+.doc ul{ list-style:none; margin-block:0; padding:0; }
+.doc li{ position:relative; padding-left:1.1em; }
+.doc li + li{ margin-top:6px; }
+.doc li::before{ content:""; position:absolute; left:.1em; top:calc(.95em - 3px); width:6px; height:6px; border-radius:50%; background:var(--blue); }
+.doc a{ color:var(--blue-deep); text-underline-offset:3px; }
+.desk{ margin-top:16px; padding:18px 20px; border:2px solid var(--blue-line); border-radius:6px; background:var(--blue-pale); }
+@media (min-width:768px){ .desk{ padding:22px 28px; } }
+.desk p + p{ margin-top:2px; }
+.enact{ margin-top:36px; color:var(--ink-sub); font-size:14px; text-align:right; }
+</style>
+</head>
+<body>
+<!-- GTM（noscript）：必要な場合はここに貼り付け -->
+<a class="skip" href="#main">本文へ<wbr>スキップ</a>
+
+<div class="page">
+
+<!-- ============ ヘッダー ============ -->
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="index.html">
+      <span class="logo-sub">ホームページ・&#x2060;LINE集客支援</span>
+      <span class="logo-name"><span class="nb">BASEマネジメントワークス</span><wbr>株式会社</span>
+      <span class="sr-only">（トップページへ）</span>
+    </a>
+  </div>
+</header>
+
+<main id="main">
+  <h1 class="band">プライバシーポリシー</h1>
+  <div class="sec-body">
+    <div class="narrow doc">
+      <p><span class="nb">BASEマネジメントワークス</span><wbr>株式会社<wbr>（以下&#x2060;「当社」）は、<wbr>お客様の<wbr>個人情報を<wbr>適切に<wbr>取り扱う<wbr>ため、<wbr>個人情報の<wbr>保護に<wbr>関する<wbr>法律<wbr>その他の<wbr>関係法令を<wbr>遵守し、<wbr>次のとおり<wbr>プライバシーポリシーを<wbr>定めます。</p>
+
+      <h2><span class="h-num">1.</span><span>取得する<wbr>個人情報</span></h2>
+      <p>当社は、<wbr>ご相談の<wbr>ご予約、<wbr>お問い合わせ、<wbr>ご契約、<wbr>業務の<wbr>遂行に<wbr>あたり、<wbr>氏名、<wbr>会社名・&#x2060;屋号、<wbr>役職、<wbr>メールアドレス、<wbr>電話番号、<wbr>ご相談内容などの<wbr>個人情報を、<wbr>適正な<wbr>方法で<wbr>取得します。</p>
+      <p>ご相談の<wbr>ご予約には、<wbr>外部の<wbr>予約サービス<wbr>（TimeRex）を<wbr>利用しています。</p>
+
+      <h2><span class="h-num">2.</span><span>利用目的</span></h2>
+      <p>取得した<wbr>個人情報は、<wbr>次の<wbr>目的の<wbr>範囲内で<wbr>利用します。</p>
+      <ul>
+        <li>ご相談・&#x2060;お問い合わせへの<wbr>対応と、<wbr>日程の<wbr>調整</li>
+        <li>ご提案・&#x2060;お見積り、<wbr>契約の<wbr>締結・&#x2060;履行、<wbr>サービスの<wbr>提供</li>
+        <li>ご請求・&#x2060;お支払いに<wbr>関する<wbr>事務</li>
+        <li>当社サービスに<wbr>関する<wbr>ご案内</li>
+        <li>サービスの<wbr>改善と、<wbr>当サイトの<wbr>利用状況の<wbr>分析</li>
+      </ul>
+
+      <h2><span class="h-num">3.</span><span>業務で<wbr>取り扱う<wbr>情報</span></h2>
+      <p>ホームページ<wbr>制作や、<wbr>LINE公式アカウント<wbr>（Lステップ）の<wbr>設計・&#x2060;設定などの<wbr>業務では、<wbr>お客様から<wbr>資料・&#x2060;データを<wbr>お預かりする<wbr>ほか、<wbr>設定作業の<wbr>中で、<wbr>LINE公式アカウントに<wbr>友だち<wbr>登録された<wbr>方の<wbr>情報などを<wbr>取り扱うことがあります。<wbr>これらの<wbr>情報は、<wbr>契約で<wbr>定めた<wbr>業務の<wbr>範囲内でのみ<wbr>利用し、<wbr>適切に<wbr>管理します。</p>
+
+      <h2><span class="h-num">4.</span><span>第三者への<wbr>提供</span></h2>
+      <p>当社は、<wbr>法令で<wbr>認められる<wbr>場合を<wbr>除き、<wbr>ご本人の<wbr>同意を<wbr>得ずに<wbr>個人情報を<wbr>第三者へ<wbr>提供しません。</p>
+
+      <h2><span class="h-num">5.</span><span>業務の<wbr>委託</span></h2>
+      <p>当社は、<wbr>利用目的の<wbr>達成に<wbr>必要な<wbr>範囲で、<wbr>個人情報の<wbr>取扱いの<wbr>全部または<wbr>一部を<wbr>外部に<wbr>委託する<wbr>ことがあります。<wbr>その場合は、<wbr>委託先を<wbr>適切に<wbr>選び、<wbr>必要かつ<wbr>適切な<wbr>監督を<wbr>行います。</p>
+
+      <h2><span class="h-num">6.</span><span>安全管理措置</span></h2>
+      <p>当社は、<wbr>個人情報の<wbr>漏えい、<wbr>滅失、<wbr>毀損を<wbr>防ぐ<wbr>ため、<wbr>次の<wbr>安全管理措置を<wbr>講じます。</p>
+      <ul>
+        <li><strong>組織的安全管理措置：</strong><wbr>個人情報の<wbr>取扱いに<wbr>関する<wbr>責任者を<wbr>定め、<wbr>取り扱う<wbr>人と<wbr>情報の<wbr>範囲を<wbr>明確に<wbr>します。</li>
+        <li><strong>人的安全管理措置：</strong><wbr>個人情報を<wbr>取り扱う<wbr>従業者や<wbr>委託先と、<wbr>秘密保持について<wbr>取り決めます。</li>
+        <li><strong>物理的安全管理措置：</strong><wbr>個人情報を<wbr>扱う機器や<wbr>書類の<wbr>盗難・&#x2060;紛失を<wbr>防ぐ<wbr>措置を<wbr>講じます。</li>
+        <li><strong>技術的安全管理措置：</strong><wbr>アクセス権限を<wbr>管理し、<wbr>不正アクセスや<wbr>ウイルスへの<wbr>対策を<wbr>行います。</li>
+        <li><strong>外的環境の<wbr>把握：</strong><wbr>外国で<wbr>個人情報を<wbr>取り扱う<wbr>場合は、<wbr>その国の<wbr>個人情報保護制度を<wbr>把握したうえで、<wbr>安全管理措置を<wbr>講じます。</li>
+      </ul>
+
+      <h2><span class="h-num">7.</span><span>開示等の<wbr>ご請求</span></h2>
+      <p>ご本人から、<wbr>保有個人データの<wbr>利用目的の<wbr>通知、<wbr>開示<wbr>（第三者提供記録の<wbr>開示を<wbr>含みます）、<wbr>訂正・&#x2060;追加・&#x2060;削除、<wbr>利用停止・&#x2060;消去、<wbr>第三者提供の<wbr>停止の<wbr>ご請求が<wbr>あった<wbr>場合は、<wbr>ご本人である<wbr>ことを<wbr>確認したうえで、<wbr>法令に<wbr>従い<wbr>遅滞なく<wbr>対応します。<wbr>ご請求は、<wbr>下記の<wbr>お問い合わせ窓口まで<wbr>ご連絡ください。</p>
+
+      <h2><span class="h-num">8.</span><span>Cookieと<wbr>アクセス解析</span></h2>
+      <!-- 広告のタグ（Google広告・Meta広告など）を設置する場合は、利用目的に「広告の配信・効果測定」を追記 -->
+      <p>当サイトでは、<wbr>利用状況を<wbr>把握して<wbr>サービスを<wbr>改善する<wbr>ため、<wbr>Cookieや<wbr>アクセス解析ツール<wbr>（<span class="nb">Google アナリティクス</span>など）を<wbr>利用する<wbr>ことがあります。<wbr>これらで<wbr>収集する<wbr>情報に、<wbr>氏名など<wbr>特定の<wbr>個人を<wbr>識別する<wbr>情報は<wbr>含まれません。<wbr>Cookieは、<wbr>ブラウザの<wbr>設定で<wbr>無効に<wbr>できます。</p>
+      <p><span class="nb">Google アナリティクス</span>が<wbr>データを<wbr>収集・&#x2060;処理する<wbr>仕組みは、<wbr>Googleが<wbr>公開している<wbr>「<a href="https://policies.google.com/technologies/partner-sites?hl=ja" target="_blank" rel="noopener">Google の<wbr>サービスを<wbr>使用する<wbr>サイトや<wbr>アプリから<wbr>収集した<wbr>情報の<wbr> Google による<wbr>使用<span class="sr-only">（新しい<wbr>タブで<wbr>開きます）</span></a>」の<wbr>ページを<wbr>ご覧ください。<wbr>また、<wbr>ブラウザに<wbr>「<a href="https://tools.google.com/dlpage/gaoptout?hl=ja" target="_blank" rel="noopener">Google アナリティクス オプトアウト アドオン<span class="sr-only">（新しい<wbr>タブで<wbr>開きます）</span></a>」を<wbr>追加すると、<wbr>計測を<wbr>無効に<wbr>できます。</p>
+
+      <h2><span class="h-num">9.</span><span>本ポリシーの<wbr>変更</span></h2>
+      <p>当社は、<wbr>法令の<wbr>改正や<wbr>業務内容の<wbr>変更に<wbr>応じて、<wbr>本ポリシーを<wbr>変更する<wbr>ことがあります。<wbr>変更後の<wbr>内容は、<wbr>本ページに<wbr>掲載した<wbr>時点から<wbr>適用します。</p>
+
+      <h2><span class="h-num">10.</span><span>お問い合わせ窓口</span></h2>
+      <p>本ポリシーと<wbr>個人情報の<wbr>取扱いに<wbr>関する<wbr>お問い合わせ<wbr>（苦情を<wbr>含みます）は、<wbr>下記まで<wbr>ご連絡ください。</p>
+      <div class="desk">
+        <p><strong><span class="nb">BASEマネジメントワークス</span><wbr>株式会社</strong></p>
+        <p>代表取締役社長　<span class="nb">柴沼 寛人</span></p>
+        <p>所在地：<wbr>お求めに<wbr>応じて、<wbr>遅滞なく<wbr>提示します</p>
+        <p>メールアドレス：<wbr><a class="nb" href="mailto:info@base-mw.com">info@base-mw.com</a></p>
+      </div>
+
+      <p class="enact">制定日：2026年11月14日</p>
+      <p class="back"><a href="index.html">トップページへ<wbr>戻る</a></p>
+    </div>
+  </div>
+</main>
+
+<!-- ============ ページ最下部 ============ -->
+<footer class="site-footer">
+  <p class="footer-name"><span class="nb">BASEマネジメントワークス</span><wbr>株式会社</p>
+  <ul class="footer-links">
+    <li><a href="company.html">運営者情報</a></li>
+    <li><a href="privacy.html" aria-current="page">プライバシーポリシー</a></li>
+  </ul>
+  <p class="copyright"><small>© 2026 BASEマネジメントワークス株式会社</small></p>
+</footer>
+
+</div><!-- /.page -->
+</body>
+</html>
