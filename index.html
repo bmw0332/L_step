@@ -12,6 +12,7 @@
 <!-- v4.2.2（2026-11-15）よくあるご質問「どんな業種に対応していますか？」の答えを、さまざまな業種に対応していることと、支援してきた事業の例（一覧）に変更 -->
 <!-- v4.2.3（2026-11-15）冒頭の予約ボタンの下に「こんな事業の方へ」として対象の業種を並べた（パソコンでは横幅いっぱい） -->
 <!-- v4.2.4（2026-11-15）業種の一覧を見出しのすぐ下に移動（「あ、自分のことだ」と最初の画面で気づけるように）。見出しが「〜方へ」で終わるため、一覧の見出しを「たとえば、こんな事業」に変更 -->
+<!-- v4.2.5（2026-11-15）「これまでの経歴」を、要望を聞き取って仕組みに落とし込んできた仕事が伝わる内容に書き直し（職務経歴書をもとに。現在の勤務先は載せていない） -->
 <title>ホームページ・LINE集客支援｜BASEマネジメントワークス株式会社</title>
 <meta name="description" content="ホームページやLINEを集客に活かしきれていない事業者の方へ。リクルート出身のコンサルタントが、「誰に来てほしいか」を一緒に整理するところから、ホームページ制作とLINE（Lステップ）の設計・設定まで一貫して支援します。">
 <meta property="og:type" content="website">
@@ -392,6 +393,12 @@ strong{ font-weight:700; }
 .career > div{ display:grid; grid-template-columns:5.6em minmax(0,1fr); border-bottom:1px solid var(--blue-line); }
 .career dt{ display:grid; place-items:center; padding:12px 8px; background:var(--blue-pale); color:var(--blue-deep); font-weight:700; text-align:center; }
 .career dd{ margin:0; padding:12px 14px; font-size:15px; line-height:1.8; }
+/* 画面幅が狭いときは、年を上・本文を下に置いて本文の幅を確保 */
+@media (max-width:359px){
+  .career > div{ grid-template-columns:minmax(0,1fr); }
+  .career dt{ place-items:center start; padding:6px 14px; text-align:left; }
+  .career dt br{ display:none; }
+}
 @media (min-width:768px){ .career dd{ font-size:16px; } }
 
 .cta-block{ padding:0 var(--pad) 60px; }
@@ -704,8 +711,10 @@ strong{ font-weight:700; }
 
       <h3 class="career-title">これまでの<wbr>経歴</h3>
       <dl class="career">
-        <div><dt>2015年</dt><dd>世界シェア1位の<wbr>ジョイント<wbr>ベンチャーに<wbr>入社。<wbr>経理、<wbr>税務、<wbr>決算、<wbr>経営企画、<wbr>業務改善、<wbr>DXに<wbr>従事</dd></div>
-        <div><dt>その後</dt><dd>株式会社<wbr>リクルートにて、<wbr>大規模な<wbr>DXシステムの<wbr>導入を<wbr>経験</dd></div>
+        <div><dt>2015年</dt><dd>世界シェア1位の<wbr>ジョイント<wbr>ベンチャーに<wbr>入社。<wbr>工場と<wbr>本社で、<wbr>経理・&#x2060;税務・&#x2060;決算を<wbr>担当</dd></div>
+        <div><dt>2021年</dt><dd>同社で、<wbr>経営企画と<wbr>DX推進の<wbr>リーダーを<wbr>兼務。<strong>現場の<wbr>要望を<wbr>聞き取って<wbr>必要な<wbr>機能に<wbr>落とし込み</strong>、<wbr>経費精算などの<wbr>システムを<wbr>導入から<wbr>定着まで<wbr>担当</dd></div>
+        <div><dt>2023年</dt><dd>株式会社<wbr>リクルートへ。<wbr>大規模な<wbr>基幹システムの<wbr>刷新で、<wbr>全事業の<wbr>「売上から<wbr>入金まで」の<wbr>業務について、<strong>要件を<wbr>まとめて<wbr>仕組みを<wbr>設計</strong></dd></div>
+        <div><dt>2020年<br>〜現在</dt><dd>並行して、<wbr>中小企業や<wbr>個人事業主の<wbr>経営管理を<wbr>支援。<wbr>社長の<wbr>要望を<wbr>聞き取り、<strong>経営判断に<wbr>使える<wbr>数字が<wbr>見える<wbr>仕組み</strong>を<wbr>つくる。<wbr>2026年に<wbr>法人化</dd></div>
       </dl>
     </div>
   </div>
