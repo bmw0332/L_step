@@ -11,6 +11,7 @@
 <!-- v4.2.1（2026-11-15）本文・見出しのフォントをNoto Sans JPに変更（手書き風はKlee Oneのまま）。読み込んでいない太さ900の指定を、実際に表示されていた700にそろえた。320px幅で冒頭の「設計・設定」が「設定」だけ次の行に残らないよう調整 -->
 <!-- v4.2.2（2026-11-15）よくあるご質問「どんな業種に対応していますか？」の答えを、さまざまな業種に対応していることと、支援してきた事業の例（一覧）に変更 -->
 <!-- v4.2.3（2026-11-15）冒頭の予約ボタンの下に「こんな事業の方へ」として対象の業種を並べた（パソコンでは横幅いっぱい） -->
+<!-- v4.2.4（2026-11-15）業種の一覧を見出しのすぐ下に移動（「あ、自分のことだ」と最初の画面で気づけるように）。見出しが「〜方へ」で終わるため、一覧の見出しを「たとえば、こんな事業」に変更 -->
 <title>ホームページ・LINE集客支援｜BASEマネジメントワークス株式会社</title>
 <meta name="description" content="ホームページやLINEを集客に活かしきれていない事業者の方へ。リクルート出身のコンサルタントが、「誰に来てほしいか」を一緒に整理するところから、ホームページ制作とLINE（Lステップ）の設計・設定まで一貫して支援します。">
 <meta property="og:type" content="website">
@@ -167,14 +168,14 @@ strong{ font-weight:700; }
 .hero{ padding:26px var(--pad) 44px; }
 .hero-grid{
   display:grid; gap:20px;
-  grid-template-areas:"title" "photo" "box" "sub" "cta" "who";
+  grid-template-areas:"title" "who" "photo" "box" "sub" "cta";
 }
 @media (min-width:768px){
   .hero{ padding-block:44px 56px; }
   .hero-grid{
     grid-template-columns:minmax(0,1fr) 296px;
-    grid-template-areas:"title photo" "box photo" "sub photo" "cta photo" "who who";
-    grid-template-rows:auto auto auto 1fr auto;
+    grid-template-areas:"title photo" "who photo" "box photo" "sub photo" "cta photo";
+    grid-template-rows:auto auto auto auto 1fr;
     column-gap:32px; row-gap:22px;
   }
 }
@@ -246,17 +247,18 @@ strong{ font-weight:700; }
 @media (min-width:768px){ .hero-sub{ font-size:16px; } }
 .hero .cta{ grid-area:cta; margin-top:6px; }
 /* 対象の業種（冒頭）。よくあるご質問の「支援してきた事業の例」とは別のもの */
-.hero-who{ grid-area:who; margin-top:8px; }
+.hero-who{ grid-area:who; margin-top:-4px; }
 .who-title{ display:flex; align-items:center; gap:10px; margin-bottom:10px; color:var(--blue-deep); font-size:14px; font-weight:700; letter-spacing:.06em; }
 .who-title::after{ content:""; flex:1; height:1px; background:var(--blue-line); }
 .who-list{ display:flex; flex-wrap:wrap; gap:6px; margin:0; padding:0; list-style:none; }
-.who-list li{ padding:1px 10px; border:1px solid var(--blue-line); border-radius:999px; background:#fff; font-size:13px; line-height:1.8; white-space:nowrap; }
-.who-list .who-etc{ padding-inline:2px; border-color:transparent; background:none; color:var(--ink-sub); }
+.who-list li, .who-chip{ padding:1px 10px; border:1px solid var(--blue-line); border-radius:999px; background:#fff; font-size:13px; line-height:1.8; white-space:nowrap; }
+/* 最後のタグと「など」は同じ行に置く */
+.who-list .who-last{ display:flex; align-items:center; gap:6px; padding:0; border:0; background:none; }
+.who-etc{ color:var(--ink-sub); font-size:13px; white-space:nowrap; }
 @media (min-width:768px){
-  .hero-who{ margin-top:14px; }
   .who-title{ font-size:15px; }
   .who-list{ gap:8px; }
-  .who-list li{ font-size:14px; }
+  .who-list li, .who-chip, .who-etc{ font-size:14px; }
 }
 
 /* ---------- 帯見出し ---------- */
@@ -531,6 +533,29 @@ strong{ font-weight:700; }
       <span class="ht-row ht-row--big"><span>活かしきれていない<wbr>方へ</span></span>
     </h1>
 
+    <div class="hero-who">
+      <p class="who-title" id="who-title">たとえば、<wbr>こんな事業</p>
+      <ul class="who-list" aria-labelledby="who-title">
+        <li>美容室・サロン</li>
+        <li>エステ・ネイル</li>
+        <li>整体・リラクゼーション</li>
+        <li>パーソナルジム</li>
+        <li>ヨガ・ピラティス</li>
+        <li>習い事・教室</li>
+        <li>学習塾</li>
+        <li>講師・セミナー</li>
+        <li>コーチ・カウンセラー</li>
+        <li>士業事務所</li>
+        <li>コンサルタント</li>
+        <li>結婚相談所</li>
+        <li>パーソナルスタイリスト</li>
+        <li>写真スタジオ</li>
+        <li>工務店・リフォーム</li>
+        <li>NPO法人</li>
+        <li class="who-last"><span class="who-chip">WEBビジネス</span><span class="who-etc">など</span></li>
+      </ul>
+    </div>
+
     <figure class="hero-photo">
       <div class="polaroid">
         <div class="portrait" role="img" aria-label="担当コンサルタント 柴沼 寛人の写真"></div>
@@ -555,29 +580,6 @@ strong{ font-weight:700; }
       <p class="cta-note" id="hero-cta-note">ご都合の<wbr>よい<wbr>日時を<wbr>選んで<wbr>予約できます</p>
     </div>
 
-    <div class="hero-who">
-      <p class="who-title" id="who-title">こんな事業の方へ</p>
-      <ul class="who-list" aria-labelledby="who-title">
-        <li>美容室・サロン</li>
-        <li>エステ・ネイル</li>
-        <li>整体・リラクゼーション</li>
-        <li>パーソナルジム</li>
-        <li>ヨガ・ピラティス</li>
-        <li>習い事・教室</li>
-        <li>学習塾</li>
-        <li>講師・セミナー</li>
-        <li>コーチ・カウンセラー</li>
-        <li>士業事務所</li>
-        <li>コンサルタント</li>
-        <li>結婚相談所</li>
-        <li>パーソナルスタイリスト</li>
-        <li>写真スタジオ</li>
-        <li>工務店・リフォーム</li>
-        <li>NPO法人</li>
-        <li>WEBビジネス</li>
-        <li class="who-etc">など</li>
-      </ul>
-    </div>
   </div>
 </section>
 
